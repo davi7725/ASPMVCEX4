@@ -1,0 +1,19 @@
+﻿@model ASPMVCEX4.Models.CalculatorVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    <input type="text" name="N1" value="@Model.Result" />
+    <select name="Action">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="divide">Divide</option>
+        <option value="multiply">Multiply</option>
+    </select>
+    <input type="text" name="N2" /><br />
+    <button type="submit">Calculate!</button>
+}
+<br /><br />
+<p>@Model.Result</p>
